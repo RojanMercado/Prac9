@@ -1,0 +1,30 @@
+#imports
+from random import*
+
+options = ["rock", "paper", "scissors"]
+
+
+aiOption = randint(0, 2)
+print(aiOption)
+print("")
+print("What to do you want to play?")
+print("rock, paper, or scissors?")
+
+
+userInput = input("> ")
+print("")
+userOption = options.index(userInput)
+
+#lost
+print("Computer:")
+print("> {}".format(options[aiOption]))
+print("")
+
+if options[aiOption - 1] == userInput:
+    print("hahahaha shame you lost!")
+
+if options[userOption - 1] == options[aiOption]:
+    print("bruh, you won?...")
+
+if userInput == options[aiOption]:
+    print("Tie!")
